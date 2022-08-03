@@ -2,14 +2,7 @@ These are some phone numbers 917-555-1234. Also, you
 can call me at 646.555.1234 and of course I'm always 
 reachable at (212) 867-5309.
 
-\(?\d{3}[-|.|\)]?\s?\d{3}[-|.]\d{4}
-
-
-
 billy.cranston@angelgrove.edu
 jason.scott@gmail.com
 zack.taylor@coolguy.net
 kimberly@tiktok.com
-
-[\w|.]*@\w*\.(com|net|edu)
-
