@@ -1,9 +1,20 @@
 function redactnumber() {
     let numbersection = document.getElementById("phonesection").innerHTML;
     console.log(numbersection)
-    let replacetest = numbersection.replace(/phone/, "cell");
-    console.log(replacetest)
-    let redacted = numbersection.replace(/\(?\(d{3}\)?/g, ("XXX"))
-    console.log(redacted)
 
+    let phonesearch = /\(?\d{3}[-|.|\)]?\s?\d{3}[-|.]\d{4}/g;
+    let redacted = numbersection.replace(phonesearch, ("XXX-XXX-XXXX"));
+    console.log(redacted);
+    document.getElementById("phonesection").innerHTML = redacted;
+
+}
+
+function betterredactnumber() {
+    let numbersection = document.getElementById('phonesection').innerHTML;
+    console.log(numbersection);
+
+    let phonesearch = /\(?(\d{3})[-|.|\)]?\s?(\d{3})[-|.](\d{4})/g;
+    let redacted = numbersection.replace(phonesearch, "$1 XXX-XXXX");
+    console.log(redacted);
+    document.getElementById("phonesection").innerHTML = redacted;
 }
