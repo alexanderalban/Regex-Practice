@@ -13,3 +13,12 @@ kimberly@tiktok.com
 
 [\w|.]*@\w*\.(com|net|edu)
 
+Kwan, Trini
+Cranston, Billy
+Taylor, Zack
+Hart, Kimberly
+Scott, Jason
+Oliver, Tommy 
+
+(\w+),\s(\w+)
+$2 $1
