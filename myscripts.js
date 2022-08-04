@@ -18,3 +18,12 @@ function betterredactnumber() {
     console.log(redacted);
     document.getElementById("phonesection").innerHTML = redacted;
 }
+
+function sensoremail () {
+    let emails = document.getElementById("emailsection").innerHTML;
+    console.log(emails);
+
+    let emailsearch = /[\w|.]*(@\w*\.(com|net|edu))/g;
+    let sensored = emails.replace(emailsearch, "XXXXX$1");
+    document.getElementById("emailsection").innerHTML = sensored;
+}
