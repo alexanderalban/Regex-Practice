@@ -27,3 +27,11 @@ function sensoremail () {
     let sensored = emails.replace(emailsearch, "XXXXX$1");
     document.getElementById("emailsection").innerHTML = sensored;
 }
+
+function nameswap() {
+    let names = document.getElementById("namesection").innerHTML;
+    console.log(names);
+    let namesearch = /(\w+),\s(\w+)/g;
+    let switchednames = names.replace(namesearch, "$2 $1");
+    document.getElementById('namesection').innerHTML = switchednames;
+}
