@@ -35,3 +35,19 @@ function nameswap() {
     let switchednames = names.replace(namesearch, "$2 $1");
     document.getElementById('namesection').innerHTML = switchednames;
 }
+
+
+function betternameswap() {
+    let names = document.getElementById('namesection').innerHTML;
+    let namesearch = /(\w+),\s(\w+)/g;
+    let result = namesearch.test(names);
+    console.log(result);
+    if (result == true) {
+        let switchednames = names.replace(namesearch, "$2 $1");
+        document.getElementById('namesection').innerHTML = switchednames;
+    } else if (result == false) {
+        let falsenamesearch = /(\w+)\s(\w+)/g;
+        let switchednames = names.replace(falsenamesearch, "$2, $1");
+        document.getElementById('namesection').innerHTML = switchednames;
+    }
+}
