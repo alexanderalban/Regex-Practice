@@ -1,3 +1,4 @@
+// a function to redact every part of a phone number except the area code
 function redactnumber() {
     let numbersection = document.getElementById("phonesection").innerHTML;
     console.log(numbersection)
@@ -19,6 +20,7 @@ function betterredactnumber() {
     document.getElementById("phonesection").innerHTML = redacted;
 }
 
+// a function to redact the username in an email address
 function sensoremail () {
     let emails = document.getElementById("emailsection").innerHTML;
     console.log(emails);
@@ -28,6 +30,7 @@ function sensoremail () {
     document.getElementById("emailsection").innerHTML = sensored;
 }
 
+// A function to switch the order of first name and last name
 function nameswap() {
     let names = document.getElementById("namesection").innerHTML;
     console.log(names);
