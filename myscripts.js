@@ -21,13 +21,31 @@ function betterredactnumber() {
 }
 
 // a function to redact the username in an email address
-function sensoremail () {
+function sensoremail() {
     let emails = document.getElementById("emailsection").innerHTML;
     console.log(emails);
 
     let emailsearch = /[\w|.]*(@\w*\.(com|net|edu))/g;
     let sensored = emails.replace(emailsearch, "XXXXX$1");
     document.getElementById("emailsection").innerHTML = sensored;
+}
+
+function bettersensoremail() {
+    let emails = document.getElementById("emailsection").innerHTML;
+    let emailsearch = /([\w|.]*)(@\w*\.(com|net|edu))/g;
+    let enamesearch = /^[\w|.]+[^@]/g;
+    let emailnames = emails.match(enamesearch);
+    console.log(emailnames);
+
+    let result = emailsearch.test(emails);
+    console.log(result);
+    if (result = true) {
+        let sensoredemails = emails.replace(emailsearch, "xxxx$2")
+        document.getElementById("emailsection").innerHTML = sensoredemails;
+    } else if (result == false) {
+        let unsensoredemails = emails.replace(enamesearch, emailnames);
+        document.getElementById("emailsection").innerHTML = unsensoredemails;
+    }
 }
 
 // A function to switch the order of first name and last name
